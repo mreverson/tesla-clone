@@ -21,6 +21,8 @@ function Header() {
                 {cars && cars.map((car, index) =>( 
                     <a key={index} href="#">{car}</a>
                 ))}
+                <a href="#">Solar Roof</a>
+                <a href="#">Solar Panels</a>
             </Menu>
 
             <RightMenu>
@@ -36,7 +38,7 @@ function Header() {
                 {cars && cars.map((car, index) =>( 
                    <li key={index}><a href="#">{car}</a></li>
                 ))}
-                
+
                 <li><a href="#">Existing Inventory</a></li>
                 <li><a href="#">Used Inventory</a></li>
                 <li><a href="#">Trade-In</a></li>
@@ -76,7 +78,7 @@ const Menu = styled.div`
         flex-wrap: nowrap;
     }
 
-    @media(max-width: 768px){
+    @media(max-width: 1200px){
         display:none;
     }
 `
@@ -89,6 +91,10 @@ const RightMenu = styled.div`
         font-weight: 600;
         text-transform: uppercase;
         margin-right: 10px;
+
+        @media(max-width: 1200px){
+            display: none;
+        }
     }
 `
 
